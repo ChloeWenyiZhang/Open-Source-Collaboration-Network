@@ -16,7 +16,7 @@ G = nx.DiGraph()
 
 # 添加节点
 for idx, row in npm_packages_df.iterrows():
-    G.add_node(row['packge_id'],
+    G.add_node(row['package_id'],
                name=row['name'],
                version=row['version'],
                description=row['description'],
@@ -31,7 +31,7 @@ print("Add nodes over.")
 # 添加边（依赖关系）
 i = 0
 for idx, row in npm_dependencies_df.iterrows():
-    G.add_edge(row['packge_id'], row['dependency_name'])
+    G.add_edge(row['package_id'], row['dependency_name'])
     if i % 10000 == 0:
         print("i")
         i += 1
@@ -39,10 +39,11 @@ for idx, row in npm_dependencies_df.iterrows():
 print("Add edges over.")
 
 # 可视化依赖网络
-plt.figure(figsize=(12, 12))
+plt.figure()
 pos = nx.spring_layout(G, k=0.1)
-nx.draw(G, pos, with_labels=True, node_size=20, font_size=8, edge_color='gray', alpha=0.7)
-plt.show()
+nx.draw(G, pos, with_labels=True, node_size=1, font_size=8, edge_color='gray', alpha=0.7)
+plt.savefig('./network.png')
+plt.close()
 
 # 分析网络
 degree_centrality = nx.degree_centrality(G)
