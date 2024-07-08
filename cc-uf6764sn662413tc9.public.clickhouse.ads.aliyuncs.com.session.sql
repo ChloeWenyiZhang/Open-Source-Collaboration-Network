@@ -1,0 +1,1 @@
+SELECT count(*) from npm_dependencies;

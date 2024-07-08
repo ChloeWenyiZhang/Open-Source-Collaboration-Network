@@ -1,0 +1,15 @@
+{
+    "sqltools.connections": [
+        {
+            "server": "cc-uf6764sn662413tc9.public.clickhouse.ads.aliyuncs.com",
+            "port": 8123,
+            "useHTTPS": false,
+            "database": "supply_chain",
+            "username": "liangchen",
+            "enableTls": false,
+            "password": "Liangchen123",
+            "driver": "ClickHouse",
+            "name": "cc-uf6764sn662413tc9.public.clickhouse.ads.aliyuncs.com"
+        }
+    ]
+}
