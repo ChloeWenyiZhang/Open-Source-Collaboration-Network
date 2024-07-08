@@ -16,7 +16,12 @@ import matplotlib.pyplot as plt
 client = Client(host='cc-uf6764sn662413tc9.public.clickhouse.ads.aliyuncs.com',
                 user='liangchen',
                 password='Liangchen123',
+<<<<<<< HEAD
                 database='supply_chain')
+=======
+                database='supply_chain'
+                )
+>>>>>>> 31a322e7e828c6b5b38d9ce840af227d00a95972
 tables = client.execute('SHOW TABLES')
 
 npm_record_query = 'SELECT * FROM npm_records'
@@ -24,7 +29,10 @@ npm_record_result = client.execute(npm_record_query)
 npm_dependencies_query = 'SELECT * FROM npm_dependencies'
 npm_dependencies_result = client.execute(npm_dependencies_query)
 
+<<<<<<< HEAD
 ## 包信息 和 包依赖 的df
+=======
+>>>>>>> 31a322e7e828c6b5b38d9ce840af227d00a95972
 npm_packages_df = pd.DataFrame(npm_record_result, columns=['package_id', 'name', 'version', 'description', 'repository_type', 'repository_url', 'license', 'homepage', 'time'])
 npm_dependencies_df = pd.DataFrame(npm_dependencies_result, columns=['package_id', 'dependency_name', 'dependency_verison', 'type'])
 
@@ -50,12 +58,21 @@ for index, row in npm_dependencies_df.iterrows():
 print("Add edges over.")
 
 num_edges = G.number_of_edges()
+<<<<<<< HEAD
 print("Number of edges:", num_edges) ## 边数
 
 isolated_nodes = list(nx.isolates(G))# 注: 去除没有依赖的边
 G.remove_nodes_from(isolated_nodes)
 num_nodes = G.number_of_nodes()
 print("Number of nodes:", num_nodes) ## 节点数
+=======
+print("Number of edges:", num_edges)
+
+isolated_nodes = list(nx.isolates(G))
+G.remove_nodes_from(isolated_nodes)
+num_nodes = G.number_of_nodes()
+print("Number of nodes:", num_nodes)
+>>>>>>> 31a322e7e828c6b5b38d9ce840af227d00a95972
 
 
 # # 可视化依赖网络
