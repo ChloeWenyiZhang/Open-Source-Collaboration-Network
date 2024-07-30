@@ -15,6 +15,8 @@ Open source repository collaboration network and npm artifact library dependency
     - 基于仓库协作的贡献者信息数据来建立仓库协作网络<br/>
 #### reflection_of_npm&repo.ipynb<br/>
     - 利用join操作，制作数据集reflection_of_npm_and_repo，表示了从repo到npm的映射关系。<br/>
+#### repo_graph.png 和 npm_graph.png
+    - 分别是协作网络和npm网络的可视化图
 
 # Task_Intro（任务介绍）
 ### 目标
