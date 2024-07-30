@@ -3,18 +3,18 @@ Open source repository collaboration network and npm artifact library dependency
 
 # 各文件说明：
 ### 注：为了使用和读取方便，所有程序文件都成对地以py和ipynb形式各保存了一份！
-co-net_request.ipynb
-    - 对Github APIs爬取数据的测试文件。因为爬数据的工作时间较长，为保证工作无失误，先在少量的仓库上尝试爬取一点作为测试。
-get_repo_co.ipynb 
-    - 针对npm数据所涉及的所有github仓库，爬取其贡献者信息（形成list），为仓库协作网络的构建做准备
-gen_npm_graph.ipynb 
-    - 基于npm信息数据以及npm的依赖关系数据建立网络
-npm_net.ipynb（已弃用）
-    - 同上。实际上这份文件缺了对图数据地持久化操作和并行化运行，上一个文件对此进行了补充！
-get_repo_co.ipynb
-    - 基于仓库协作的贡献者信息数据来建立仓库协作网络
-reflection_of_npm&repo.ipynb
-    - 利用join操作，制作数据集reflection_of_npm_and_repo，表示了从repo到npm的映射关系。
+co-net_request.ipynb<br/>
+    - 对Github APIs爬取数据的测试文件。因为爬数据的工作时间较长，为保证工作无失误，先在少量的仓库上尝试爬取一点作为测试。<br/>
+get_repo_co.ipynb <br/>
+    - 针对npm数据所涉及的所有github仓库，爬取其贡献者信息（形成list），为仓库协作网络的构建做准备<br/>
+gen_npm_graph.ipynb <br/>
+    - 基于npm信息数据以及npm的依赖关系数据建立网络<br/>
+npm_net.ipynb（已弃用）<br/>
+    - 同上。实际上这份文件缺了对图数据地持久化操作和并行化运行，上一个文件对此进行了补充！<br/>
+get_repo_co.ipynb<br/>
+    - 基于仓库协作的贡献者信息数据来建立仓库协作网络<br/>
+reflection_of_npm&repo.ipynb<br/>
+    - 利用join操作，制作数据集reflection_of_npm_and_repo，表示了从repo到npm的映射关系。<br/>
 
 
 # Task_Intro（任务介绍）
